@@ -16,7 +16,7 @@ class Usuario(AbstractUser):
         FEMININO = (2, "Mulher",)
         OUTRO = (3, "Prefiro não comentar",)
         
-    nome = models.CharField(max_length=50, default=0)
+    nome = models.CharField(max_length=50)
     idade = models.DecimalField(max_digits=10, decimal_places=2, default=16)
     genero = models.IntegerField(choices=Genero.choices, default=Genero.OUTRO, verbose_name="Gênero")
     username = None
