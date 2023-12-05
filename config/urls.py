@@ -29,7 +29,7 @@ router.register(r"racas", RacaViewSet)
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include(router.urls)),
-    path("api/", include(usuario_router.urls)),
+    path("api/usuarios/", include(usuario_router.urls)),
     path("api/media/", include(uploader_router.urls)),
     path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("api/token/refresh/", TokenRefreshView.as_view(), name="Token_refresh"),
